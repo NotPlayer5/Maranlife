@@ -1,0 +1,748 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #020b24;
+    color: white;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5%;
+
+    background: rgba(2, 11, 36, 0.75);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(0, 174, 255, 0.2);
+
+    z-index: 1000;
+
+    overflow: visible;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    flex: 0 0 auto;
+
+    font-size: 28px;
+    font-weight: 900;
+
+    color: #008cff;
+
+    text-shadow:
+        0 0 5px #00c8ff,
+        0 0 15px #00c8ff,
+        0 0 30px #008cff,
+        0 0 50px #008cff;
+}
+
+.logo span {
+    color: #00c8ff;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    margin-left: 50px;
+
+    flex: 0 0 auto;
+}
+
+nav a {
+    color: #d8f5ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00c8ff;
+
+    text-shadow:
+        0 0 10px #00c8ff,
+        0 0 20px #008cff;
+}
+
+
+/* =========================
+   BOTONES DERECHA
+========================= */
+
+.navbar-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-left: auto;
+
+    margin-right: -10px;
+
+    flex: 0 0 auto;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   BOTÓN DISCORD
+========================= */
+
+.discord-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 105px;
+    height: 40px;
+
+    padding: 0;
+
+    flex: 0 0 105px;
+
+    border-radius: 7px;
+
+    border: 1px solid rgba(0, 200, 255, 0.4);
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    background: linear-gradient(
+        90deg,
+        #006eff,
+        #00aaff
+    );
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.45);
+
+    transition: 0.3s;
+}
+
+.discord-button:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px #00c8ff,
+        0 0 30px rgba(0, 140, 255, 0.6);
+}
+
+
+/* =========================
+   BOTÓN COPIAR IP
+========================= */
+
+.ip-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 115px;
+    min-width: 115px;
+    height: 40px;
+
+    padding: 0;
+
+    flex: 0 0 115px;
+
+    border: 1px solid rgba(0, 200, 255, 0.4);
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    background: linear-gradient(
+        90deg,
+        #006eff,
+        #00c8ff
+    );
+
+    box-shadow:
+        0 0 10px rgba(0, 200, 255, 0.5);
+
+    transition: 0.3s;
+}
+
+.ip-button:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px #00c8ff,
+        0 0 30px #008cff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #063b72 0%,
+            #021d45 35%,
+            #020b24 75%
+        );
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.hero-content {
+    animation: appear 1.5s ease;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.hero h1 {
+    font-size: clamp(60px, 10vw, 130px);
+
+    font-weight: 900;
+
+    color: #008cff;
+
+    text-shadow:
+        0 0 5px #00c8ff,
+        0 0 15px #00c8ff,
+        0 0 30px #00aaff,
+        0 0 60px #0077ff,
+        0 0 100px #0055ff;
+}
+
+.hero h1 span {
+    color: #00c8ff;
+}
+
+
+/* =========================
+   SUBTITULO
+========================= */
+
+.hero p {
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    color: #cceeff;
+
+    text-shadow:
+        0 0 10px rgba(0, 200, 255, 0.5);
+}
+
+
+/* =========================
+   BOTÓN PRINCIPAL
+========================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 15px 40px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #006eff,
+        #00c8ff
+    );
+
+    box-shadow:
+        0 0 10px #008cff,
+        0 0 25px rgba(0, 200, 255, 0.6);
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 15px #00c8ff,
+        0 0 40px #008cff,
+        0 0 70px rgba(0, 200, 255, 0.5);
+}
+
+
+/* =========================
+   TIENDA
+========================= */
+
+.shop {
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #020b24,
+            #031638,
+            #020b24
+        );
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.section-title h2 {
+    font-size: 50px;
+
+    color: #00c8ff;
+
+    text-shadow:
+        0 0 10px #00c8ff,
+        0 0 30px #008cff;
+}
+
+.section-title p {
+    margin-top: 15px;
+
+    color: #a8dfff;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.product-card {
+    padding: 35px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5, 44, 90, 0.9),
+            rgba(2, 18, 45, 0.95)
+        );
+
+    border: 1px solid rgba(0, 200, 255, 0.35);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.15);
+
+    transition: 0.35s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #00c8ff;
+
+    box-shadow:
+        0 0 20px rgba(0, 200, 255, 0.4),
+        0 0 50px rgba(0, 140, 255, 0.2);
+}
+
+
+/* =========================
+   IMAGEN DE LA LLAVE
+========================= */
+
+.product-image {
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 174, 255, 0.18),
+            rgba(0, 20, 50, 0.4)
+        );
+}
+
+.product-image img {
+    max-width: 70%;
+    max-height: 130px;
+
+    object-fit: contain;
+
+    transition: 0.4s;
+
+    filter:
+        drop-shadow(0 0 8px #00c8ff)
+        drop-shadow(0 0 20px rgba(0, 140, 255, 0.7));
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+
+    filter:
+        drop-shadow(0 0 12px #00c8ff)
+        drop-shadow(0 0 30px #008cff);
+}
+
+
+/* =========================
+   PRODUCT NAME
+========================= */
+
+.product-card h3 {
+    font-size: 25px;
+
+    color: #00c8ff;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    color: #a9cde5;
+
+    line-height: 1.6;
+
+    min-height: 50px;
+}
+
+
+/* =========================
+   PRECIO Y CANTIDAD
+========================= */
+
+.product-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 25px 0;
+}
+
+.quantity {
+    padding: 6px 12px;
+
+    border-radius: 6px;
+
+    background: rgba(0, 174, 255, 0.15);
+
+    border: 1px solid rgba(0, 200, 255, 0.3);
+
+    color: #9eeaff;
+
+    font-weight: bold;
+}
+
+.price {
+    margin: 25px 0;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #00c8ff;
+}
+
+.product-info .price {
+    margin: 0;
+
+    font-size: 28px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #00c8ff;
+}
+
+
+/* =========================
+   BUY BUTTON
+========================= */
+
+.buy-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            90deg,
+            #006eff,
+            #00c8ff
+        );
+
+    box-shadow:
+        0 0 10px rgba(0, 200, 255, 0.5);
+
+    transition: 0.3s;
+}
+
+.buy-button:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 0 15px #00c8ff,
+        0 0 30px #008cff;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: #02091c;
+}
+
+.contact h2 {
+    color: #00c8ff;
+
+    font-size: 40px;
+
+    text-shadow:
+        0 0 20px #00c8ff;
+}
+
+.contact p {
+    margin-top: 15px;
+
+    color: #a9cde5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #010615;
+
+    color: #648aa8;
+
+    border-top: 1px solid rgba(0, 200, 255, 0.15);
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        min-height: 75px;
+
+        padding: 12px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        margin-left: 15px;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .navbar-buttons {
+        margin-left: auto;
+        margin-right: -10px;
+        gap: 6px;
+    }
+
+    .discord-button {
+        width: 90px;
+        flex-basis: 90px;
+        font-size: 12px;
+    }
+
+    .ip-button {
+        width: 100px;
+        min-width: 100px;
+        flex-basis: 100px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .shop {
+        padding: 100px 5%;
+    }
+}
