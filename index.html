@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaranLife — Tienda Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR IZQUIERDA -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="logo-box">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+                <h2>Maran<span>Life</span></h2>
+                <p>Tienda Oficial</p>
+            </div>
+
+            <nav class="sidebar-menu">
+                <button class="menu-item active" data-tab="inicio">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </button>
+                <button class="menu-item" data-tab="llaves">
+                    <i class="fa-solid fa-key"></i>
+                    <span>Llaves</span>
+                </button>
+                <button class="menu-item" data-tab="rangos">
+                    <i class="fa-solid fa-crown"></i>
+                    <span>Rangos VIP</span>
+                </button>
+                <button class="menu-item" data-tab="kits">
+                    <i class="fa-solid fa-khanda"></i>
+                    <span>Kits</span>
+                </button>
+                <button class="menu-item" data-tab="protecciones">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Protecciones</span>
+                </button>
+                <button class="menu-item" data-tab="permisos">
+                    <i class="fa-solid fa-shield-cat"></i>
+                    <span>Permisos</span>
+                </button>
+                <button class="menu-item" data-tab="contacto">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Soporte</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="ip-button" id="copy-ip" type="button">
+                    <i class="fa-solid fa-copy"></i> COPIAR IP
+                </button>
+                <a href="https://discord.gg/vNdzWDwCk" target="_blank" class="discord-button">
+                    <i class="fa-brands fa-discord"></i> DISCORD
+                </a>
+            </div>
+        </aside>
+
+        <!-- PANEL PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- VISTA 1: INICIO -->
+            <section id="tab-inicio" class="tab-content active">
+                <div class="hero">
+                    <div class="hero-brand">
+                        <i class="fa-solid fa-cube hero-icon"></i>
+                        <h1>Maran<span>Life</span></h1>
+                    </div>
+                    <p>Selecciona una categoría en el menú lateral o en las tarjetas para ver los productos disponibles.</p>
+                </div>
+
+                <div class="category-grid">
+                    <div class="category-card" onclick="switchTab('rangos')">
+                        <i class="fa-solid fa-crown"></i>
+                        <h3>Rangos VIP</h3>
+                        <p>Obtén ventajas exclusivas, beneficios y volar en la lobby.</p>
+                        <span class="btn-link">Ver Rangos <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+
+                    <div class="category-card" onclick="switchTab('llaves')">
+                        <i class="fa-solid fa-key"></i>
+                        <h3>Llaves Crate</h3>
+                        <p>Abre cajas misteriosas dentro del servidor para ganar premios.</p>
+                        <span class="btn-link">Ver Llaves <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+
+                    <div class="category-card" onclick="switchTab('kits')">
+                        <i class="fa-solid fa-khanda"></i>
+                        <h3>Kits</h3>
+                        <p>Sets completos de herramientas, armaduras y ítems chetados.</p>
+                        <span class="btn-link">Ver Kits <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+
+                    <div class="category-card" onclick="switchTab('protecciones')">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Protecciones</h3>
+                        <p>Asegura tus construcciones y terrenos con piedras de protección.</p>
+                        <span class="btn-link">Ver Protecciones <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+
+                    <div class="category-card" onclick="switchTab('permisos')">
+                        <i class="fa-solid fa-shield-cat"></i>
+                        <h3>Permisos</h3>
+                        <p>Desbloquea habilidades y comandos únicos como /fly, /repair o /anvil.</p>
+                        <span class="btn-link">Ver Permisos <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA 2: LLAVES -->
+            <section id="tab-llaves" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-key"></i> Llaves Crate</h2>
+                    <p>Adquiere tus llaves de recompensas para el servidor</p>
+                </div>
+
+                <div class="subcategory-title">
+                    <h3><i class="fa-solid fa-gem"></i> Llaves Vacío</h3>
+                </div>
+                <div class="products">
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x2 llaves de Vacío para abrir la crate Vacío."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/da69dbfd1f62bd91dd10db963f24bf65b4d7f8d5.png" alt="Llave Vacío">
+                        </div>
+                        <h3>Llave Vacío</h3>
+                        <p class="description">Pack de 2 llaves Vacío para conseguir recompensas dentro del servidor.</p>
+                        <div class="product-info">
+                            <span class="quantity">2x</span>
+                            <span class="price">$1.45 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x3 llaves de Vacío para abrir la crate Vacío."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/da69dbfd1f62bd91dd10db963f24bf65b4d7f8d5.png" alt="Llave Vacío">
+                        </div>
+                        <h3>Llave Vacío</h3>
+                        <p class="description">Pack de 3 llaves Vacío para conseguir recompensas dentro del servidor.</p>
+                        <div class="product-info">
+                            <span class="quantity">3x</span>
+                            <span class="price">$2.45 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x5 llaves de Vacío para abrir la crate Vacío."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/da69dbfd1f62bd91dd10db963f24bf65b4d7f8d5.png" alt="Llave Vacío">
+                        </div>
+                        <h3>Llave Vacío</h3>
+                        <p class="description">Pack de 5 llaves Vacío para conseguir recompensas dentro del servidor.</p>
+                        <div class="product-info">
+                            <span class="quantity">5x</span>
+                            <span class="price">$3.45 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class="subcategory-title" style="margin-top: 40px;">
+                    <h3><i class="fa-solid fa-shield"></i> Llaves Guardian</h3>
+                </div>
+                <div class="products">
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x2 llaves de Guardian para abrir la crate Emperador."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/33011b0b5d74d75ef25f1abd9f25bac180d65983.png" alt="Llave Guardian">
+                        </div>
+                        <h3>Llave Guardian</h3>
+                        <p class="description">Pack de 2 llaves Guardian para recompensas exclusivas.</p>
+                        <div class="product-info">
+                            <span class="quantity">2x</span>
+                            <span class="price">$1.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x3 llaves de Guardian para abrir la crate Emperador."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/33011b0b5d74d75ef25f1abd9f25bac180d65983.png" alt="Llave Guardian">
+                        </div>
+                        <h3>Llave Guardian</h3>
+                        <p class="description">Pack de 3 llaves Guardian para recompensas exclusivas.</p>
+                        <div class="product-info">
+                            <span class="quantity">3x</span>
+                            <span class="price">$2.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x5 llaves de Guardian para abrir la crate Emperador."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/33011b0b5d74d75ef25f1abd9f25bac180d65983.png" alt="Llave Guardian">
+                        </div>
+                        <h3>Llave Guardian</h3>
+                        <p class="description">Pack de 5 llaves Guardian para recompensas exclusivas.</p>
+                        <div class="product-info">
+                            <span class="quantity">5x</span>
+                            <span class="price">$4.49 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+                </div>
+
+                <div class="subcategory-title" style="margin-top: 40px;">
+                    <h3><i class="fa-solid fa-ghost"></i> Llaves Sculk</h3>
+                </div>
+                <div class="products">
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x2 llaves de Sculk para abrir la crate Reencarnacion."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/e9624ef4f85a0e2ee785453b402414e233d0b304.png" alt="Llave Sculk">
+                        </div>
+                        <h3>Llave Sculk</h3>
+                        <p class="description">Pack de 2 llaves Sculk para acceder a premios supremos.</p>
+                        <div class="product-info">
+                            <span class="quantity">2x</span>
+                            <span class="price">$2.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x3 llaves de Sculk para abrir la crate Reencarnacion."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/e9624ef4f85a0e2ee785453b402414e233d0b304.png" alt="Llave Sculk">
+                        </div>
+                        <h3>Llave Sculk</h3>
+                        <p class="description">Pack de 3 llaves Sculk para acceder a premios supremos.</p>
+                        <div class="product-info">
+                            <span class="quantity">3x</span>
+                            <span class="price">$4.25 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Pack de x5 llaves de Sculk para abrir la crate Reencarnacion."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://dunb17ur4ymx4.cloudfront.net/packages/images/e9624ef4f85a0e2ee785453b402414e233d0b304.png" alt="Llave Sculk">
+                        </div>
+                        <h3>Llave Sculk</h3>
+                        <p class="description">Pack de 5 llaves Sculk para acceder a premios supremos.</p>
+                        <div class="product-info">
+                            <span class="quantity">5x</span>
+                            <span class="price">$6.49 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA 3: RANGOS -->
+            <section id="tab-rangos" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-crown"></i> Rangos VIP</h2>
+                    <p>Obtén beneficios exclusivos y destaca en la comunidad</p>
+                </div>
+
+                <div class="products">
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El rango guardian es un rango exclusivo para jugadores que tienen experiencia previa en el servidor. Permisos: /fly, /hat, /anvil, /kit Guardian, /ptime, /pweather, /feed, /enderchest. "><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/rz4fkwbr1s7h.png" alt="Rango Guardian">
+                        </div>
+                        <h3>GUARDIAN</h3>
+                        <p class="description">Rango con mas permisos y beneficios que el rango SubMaran, acceso al kit Guardian.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$4.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El rango vacío es un rango bastante avanzado dentro del servidor con permisos multiples. Permisos: /fly, /hat, /anvil, /kit Guardian, /kit Vacío, /ptime, /pweather, /feed, /heal, /enderchest, /anvil, /getpos. "><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/9r9eiwik12ac.png" alt="Rango Vacío">
+                        </div>
+                        <h3>VACÍO</h3>
+                        <p class="description">Mejor que el rango Guardian con mas permisos y beneficios, acceso al kit Guardian y el kit Vacío.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$9.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El rango Sculk es un rango exclusivo para jugadores que han alcanzado un alto nivel de habilidad en el servidor. Permisos: /fly, /hat, /anvil, /kit Guardian, /kit Vacío, /kit Sculk, /ptime, /pweather, /feed, /heal, /enderchest, /anvil, /getpos, /god, /grindstone, /repair. "><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/v3ftdf5tom1z.png" alt="Rango Sculk">
+                        </div>
+                        <h3>SCULK</h3>
+                        <p class="description">Uno de los rangos mas increibles del servidor con ventajas exclusivas unicas para este rango, acesso al kit Guardian, kit Vacío y kit Sculk.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$14.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El rango Remembrance es el segundo rango mas exclusivo del servidor, cualquiera que lo posea podra tener permisos aun mas exclusivos que un jugador semi staff. Permisos: /fly, /hat, /anvil, /kit Guardian, /kit Vacío, /kit Sculk, /kit Remembrance, /ptime, /pweather, /feed, /heal, /enderchest, /anvil, /getpos, /god, /grindstone, /repair, /god, /glow, /invsee."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/y6j18mtmsvdo.png" alt="Rango Remembrance">
+                        </div>
+                        <h3>REMEMBRANCE</h3>
+                        <p class="description">El rango de la criatura mas poderosa del servidor, acceso a beneficios exclusivos, acceso al kit Guardian, kit Vacío, kit Sculk y kit Remembrance.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$19.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El rango Maran es el rango más poderoso del servidor, solo los que realmente tienen mucha experiencia en el servidor saben cuan de poderoso es este rango. Permisos: /fly, /hat, /anvil, /kit Guardian, /kit Vacío, /kit Sculk, /kit Remembrance, /ptime, /pweather, /feed, /heal, /enderchest, /anvil, /getpos, /god, /grindstone, /repair, /god, /glow, /invsee, /nick, /vanish, /time, /weather."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/9edww3hwzdu9.png" alt="Rango Maran">
+                        </div>
+                        <h3>MARAN</h3>
+                        <p class="description">El rango mas poderoso del servidor, acceso anticipado en mantenimientos, beneficios exclusivos y acceso total a todos los kits.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$24.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA 4: KITS -->
+            <section id="tab-kits" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-khanda"></i> Kits</h2>
+                    <p>Equípate con los mejores paquetes de objetos</p>
+                </div>
+
+                <div class="products">
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El kit Guardian es el kit más efectivo para el PVP y defensa en contra de los mobs, items: (Full guardian prote 5 y filo 5, 5 manzanas doradas encantadas, x3 llave Emperador)."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/d73wwjexmivk.png" alt="Kit Guardian">
+                        </div>
+                        <h3>Kit Guardian</h3>
+                        <p class="description">El kit mas efectivo para el PVP y defensa en contra de los mobs.</p>
+                        <div class="product-info">
+                            <span class="quantity">1x</span>
+                            <span class="price">$1.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El kit Vacío es el kit más efectivo para la exploración y lucha en contra de los mobs, items: (Full Vacío prote 7 y filo 7, 10 manzanas doradas encantadas, x1 llave Vacío )"><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/2iq60ufyckc7.png" alt="Kit Vacío">
+                        </div>
+                        <h3>Kit Vacío</h3>
+                        <p class="description">El kit mas efectivo para la exploración y supervivencia en el mundo.</p>
+                        <div class="product-info">
+                            <span class="quantity">1x</span>
+                            <span class="price">$3.49 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El kit Sculk es el kit más efectivo para la resistencia, autoprotección y durabilidad, ideal para la lucha contra los jefes del servidor, items: (Full Sculk prote 9 y filo 9, 15 manzanas doradas encantadas, x1 llave Sculk )"><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/9pr9p789qxix.png" alt="Kit Sculk">
+                        </div>
+                        <h3>Kit Sculk</h3>
+                        <p class="description">El kit mas efectivo para la resistencia, autoprotección y durabilidad, ideal para la lucha contra los jefes del servidor.</p>
+                        <div class="product-info">
+                            <span class="quantity">1x</span>
+                            <span class="price">$4.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="El kit Remembrance es el kit más efectivo y poderoso de todos, con items únicos y poderosos para dominar el servidor, obteniendo ventaja sobre los demás jugadores, items: (Full Remembrance prote 13 y filo 13, 20 manzanas doradas encantadas, x1 llave Remembrance )"><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <img src="https://imagetourl.cloud/gwme3509ebap.png" alt="Kit Remembrance">
+                        </div>
+                        <h3>Kit Remembrance</h3>
+                        <p class="description">El kit mas efectivo y poderoso de todos, con items únicos y poderosos para dominar el servidor, obteniendo ventaja sobre los demás jugadores.</p>
+                        <div class="product-info">
+                            <span class="quantity">1x</span>
+                            <span class="price">$6.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA 5: PROTECCIONES -->
+            <section id="tab-protecciones" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-shield-halved"></i> Piedras de Protección</h2>
+                    <p>Protege tu terreno y construcciones contra grifeos o ataques</p>
+                </div>
+
+                <div class="products">
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Usa esta piedra de proteccion para cubrir tu zona, puede proteger un radio de 16x16 bloques."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-cube" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Protección 16x16</h3>
+                        <p class="description">Bloque de proteccion de hierro, cubre un espacio de 16x16 bloques.</p>
+                        <div class="product-info">
+                            <span class="quantity">1x Bloque</span>
+                            <span class="price">$1.00 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Usa esta piedra de proteccion para cubrir tu zona, puede proteger un radio de 32x32 bloques."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-cubes" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Protección 32x32</h3>
+                        <p class="description">Bloque de proteccion de diamante, cubre un espacio de 32x32 bloques.</p>
+                        <div class="product-info">
+                            <span class="quantity">1x Bloque</span>
+                            <span class="price">$2.50 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Usa esta piedra de proteccion para cubrir tu zona, puede proteger un radio de 64x64 bloques."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-building-shield" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Protección 64x64</h3>
+                        <p class="description">Bloque de proteccion de esmeralda, cubre un espacio de 64x64 bloques.</p>
+                        <div class="product-info">
+                            <span class="quantity">1x Bloque</span>
+                            <span class="price">$5.00 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Usa esta piedra de proteccion para cubrir tu zona, puede proteger un radio de 128x128 bloques."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-chess-rook" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Protección 128x128</h3>
+                        <p class="description">Bloque de proteccion de obsidiana, cubre un espacio de 128x128 bloques.</p>
+                        <div class="product-info">
+                            <span class="quantity">1x Bloque</span>
+                            <span class="price">$9.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA 6: PERMISOS -->
+            <section id="tab-permisos" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-shield-cat"></i> Permisos</h2>
+                    <p>Desbloquea habilidades y comandos individuales para tu personaje</p>
+                </div>
+
+                <div class="products">
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Permite usar /fly en los lugares que quieras para volar libremente por el mapa."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-plane" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Permiso /fly</h3>
+                        <p class="description">Permite usar /fly en los lugares que quieras para volar libremente por el mapa.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$3.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Usa este comando para reparar la durabilidad de tus herramientas en cualquier parte del servidor."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-screwdriver-wrench" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Permiso /repair</h3>
+                        <p class="description">Repara la durabilidad de tus herramientas con un simple comando.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$3.49 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Comando bastante util si necesitas un yunque de inmediato pero no tienes el hierro suficiente para poder crear uno."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-hammer" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Permiso /anvil</h3>
+                        <p class="description">Accede a un yunque virtual portátil en cualquier momento para encantar o reparar tus objetos.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$2.49 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Este comando te permite utilizar cualquier bloque como sombrero de accesorio simplemente haciendo /hat con el item que quieres de sombrero en tu mano."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-hat-wizard" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Permiso /hat</h3>
+                        <p class="description">Ponte cualquier bloque en la cabeza como sombrero accesorio.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$1.50 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+
+                    <div class="product-card">
+                        <button class="info-btn" title="Ver más información" data-info="Este comando te permite abrir tu enderchest en cualquier lugar donde te encuentres en caso de emergencia."><i class="fa-solid fa-circle-info"></i></button>
+                        <div class="product-image">
+                            <i class="fa-solid fa-box-open" style="font-size: 3.5rem; color: #38bdf8;"></i>
+                        </div>
+                        <h3>Permiso /enderchest</h3>
+                        <p class="description">Permite abrir el enderchest en cualquier lugar que estes.</p>
+                        <div class="product-info">
+                            <span class="quantity">Permanente</span>
+                            <span class="price">$2.99 USD</span>
+                        </div>
+                        <button class="buy-button">COMPRAR</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VISTA 7: CONTACTO -->
+            <section id="tab-contacto" class="tab-content">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-headset"></i> Centro de Soporte</h2>
+                    <p>¿Necesitas ayuda con alguna compra que realizaste? Contactanos mediante nuestro Discord creando un ticket.</p>
+                </div>
+                <div class="support-box">
+                    <p>Para cualquier duda sobre compras o entrega de rangos, abre un ticket en nuestro Discord oficial en el cual podrás recibir asistencia personalizada en cualquier momento.</p>
+                    <a href="https://discord.gg/vNdzWDwCk" target="_blank" class="discord-button large">
+                        <i class="fa-brands fa-discord"></i> Ir al Discord de Soporte
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- MODAL DE INFORMACIÓN -->
+    <div id="info-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3><i class="fa-solid fa-circle-info"></i> <span id="modal-title">Información</span></h3>
+            <div id="modal-text"></div>
+            <button class="close-modal" onclick="cerrarModal()">ENTENDIDO</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
